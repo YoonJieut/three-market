@@ -8,7 +8,7 @@ import { Center } from "@react-three/drei";
 export default function KittenScene() {
   return (
     <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
-      <directionalLight position={[-5, -5, -5]} intensity={2} />
+      {/* <directionalLight position={[-5, -5, -5]} intensity={2} /> */}
       <Suspense fallback={null}>
         <Center>
           <Kitten />
