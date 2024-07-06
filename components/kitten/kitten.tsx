@@ -15,21 +15,21 @@ export default function Kitten() {
   const [color, setColor] = useState("#ff0000"); // 초기 색상은 빨간색
 
   // 재질 변경 함수
-  const changeColor = (color: string) => {
-    scene.traverse((child) => {
-      if (child.isMesh) {
-        const mesh = child as THREE.Mesh;
-        if (mesh.material) {
-          (mesh.material as MeshStandardMaterial).color.set(color);
-        }
-      }
-    });
-  };
+  // const changeColor = (color: string) => {
+  //   scene.traverse((child) => {
+  //     if (child.isMesh) {
+  //       const mesh = child as THREE.Mesh;
+  //       if (mesh.material) {
+  //         (mesh.material as MeshStandardMaterial).color.set(color);
+  //       }
+  //     }
+  //   });
+  // };
 
   // useEffect를 사용하여 색상 변경을 반영
-  useEffect(() => {
-    changeColor(color);
-  }, [color, scene]);
+  // useEffect(() => {
+  //   changeColor(color);
+  // }, [color, scene]);
 
   useFrame(() => {
     group.current?.rotateY(MathUtils.degToRad(0.2));
@@ -49,11 +49,12 @@ export default function Kitten() {
       <OrbitControls args={[camera, gl.domElement]} />
       {/* 사용자 인터페이스 - 색상 선택 */}
       <div className="absolute top-5 left-5">
-        <input
+        인풋 태그 들어올 곳
+        {/* <input
           type="color"
           value={color}
           onChange={(e) => setColor(e.target.value)}
-        />
+        /> */}
       </div>
     </>
   );
