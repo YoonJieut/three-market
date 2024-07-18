@@ -14,7 +14,7 @@ const TestModel = () => {
   return (
     <section>
       <div className="w-full">
-        <ModelView></ModelView>
+        <ModelView />
       </div>
     </section>
   );
